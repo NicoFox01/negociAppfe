@@ -1,0 +1,158 @@
+/* --- Design System --- */
+:root {
+    /* Brand Colors */
+    --color-primary: #F28C28;   /* Naranja Crecimiento */
+    --color-danger: #C8453A;    /* Rojo Control */
+    --color-success: #2FB7B3;   /* Turquesa Tech */
+    
+    /* Neutrals */
+    --color-dark: #2E2E2E;
+    --color-gray: #7A7A7A;
+    --color-light: #F4F6F8;
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing & Borders */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-card: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+/* --- Components --- */
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E0E0;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-success);
+    box-shadow: 0 0 0 3px rgba(47, 183, 179, 0.1);
+}
+
+/* Link */
+.link-secondary {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.link-secondary:hover {
+    color: var(--color-primary);
+}
+
+/* --- Layouts --- */
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.login-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 400px;
+    border-top: 4px solid var(--color-success); /* Turquesa Tech Accent */
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo-text {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.logo-text .highlight {
+    color: var(--color-success);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
