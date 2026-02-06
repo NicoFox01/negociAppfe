@@ -8,7 +8,7 @@ const isLocal = window.location.hostname === 'localhost' || window.location.host
 // - En produccion: La URL que configures aquí (la de tu deploy en Render/Railway/Vercel)
 export const API_BASE_URL = isLocal 
     ? 'http://localhost:8000' 
-    : 'https://negociapp-be-git-main-nicofox01s-projects.vercel.app';
+    : 'https://negociapp-be.vercel.app';
 
 export const API_V1_STR = '/api/v1';
 
